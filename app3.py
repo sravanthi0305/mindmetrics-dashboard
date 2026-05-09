@@ -567,15 +567,14 @@ with tab3:
                 textposition="outside", marker_line_width=0,
             ))
         layout = PLOTLY_LAYOUT.copy()
-layout.pop("xaxis", None)
-
-fig_gauge.update_layout(
-    **layout,
-    height=220,
-    xaxis=dict(range=[0,110], gridcolor="#1a2640"),
-    showlegend=False,
-    xaxis_title="Risk Contribution (%)"
-)
+        layout.pop("xaxis", None)
+        fig_gauge.update_layout(
+       **layout,
+        height=220,
+        xaxis=dict(range=[0,110], gridcolor="#1a2640"),
+        showlegend=False,
+        xaxis_title="Risk Contribution (%)"
+        )
         st.plotly_chart(fig_gauge, use_container_width=True)
  
  
